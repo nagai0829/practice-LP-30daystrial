@@ -1,0 +1,318 @@
+body {
+    color: #082B48;
+    font-family Verdana,
+    Geneva,
+    Tahoma,
+    sans-serif;
+    line-height: 1.5
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #082B48;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.header-left {
+    float: left;
+}
+
+header {
+    padding: 20px 0;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-nav-item {
+    float: left;
+    margin-left: 50px;
+}
+
+.header-nav-item a {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.top {
+    background-image: url(../img/main-vsual-nontitle.png);
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.top-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-left {
+    float: left;
+    width: 48%;
+}
+
+.about-right {
+    float: right;
+    width: 48%;
+}
+
+.course {
+    background-color: #e3fcf4;
+}
+
+.course-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-item {
+    width: 30%;
+}
+
+
+/* =====================================================
+コース画像拡大モーダル （ここから本PEN のコア）
+===================================================== */
+
+#grayDisplay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* コンテンツ全てに対して固定的に 1160pxとか指定されているときの対応で、
+  ダサいが!importantつける */
+    max-width: 100% !important;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#grayDisplay img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.contact-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[ type="text"] {
+    width: 600px;
+    border: 3px solid #d8d8d8;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 20px 60px;
+    display: inline-block;
+    background-color: #082B48;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-register {
+    background-color: #ec6d64;
+    display: block;
+    margin: auto;
+}
+
+footer {
+    background-color: #082B48;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.copyright {
+    font-size: 12px;
+    float: right;
+}
+
+
+/*==============
+スマホ用の表示
+==============*/
+
+@media only screen and (max-width:767px) {
+    .clear::after {
+        content: none;
+    }
+    /*==============
+  header
+  ==============*/
+    .header-left {
+        float: none;
+    }
+    .header-title {
+        text-align: center;
+    }
+    .header-right {
+        float: none;
+    }
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-nav-item {
+        float: none;
+        margin: 0;
+    }
+    /*=============
+  top
+  =======*/
+    .top {
+        padding: 120px 0;
+    }
+    .top-title {
+        font-size: 32px;
+    }
+    .top-subtitle {
+        font-size: 14px;
+    }
+    .section {
+        padding: 80px 0;
+    }
+    .section-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .section p {
+        font-size: 14px;
+    }
+    .about-left {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about-right {
+        float: none;
+        width: 100%;
+    }
+    /*=========
+  course
+  =========*/
+    .course-wrapper {
+        flex-wrap: wrap;
+    }
+    .course-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /*=========
+  contact
+  =========*/
+    input[type="email"],
+    input[type="text"] {
+        width: 100%;
+    }
+    /*=========
+  footer
+  =========*/
+    .copyright {
+        font-size: 10px;
+        float: none;
+        text-align: center;
+    }
+}
+
+#page_top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: -50px;
+    background: #082B48;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+#page_top a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+#page_top a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
